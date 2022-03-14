@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html> <head> 
+    <title>Bird Hunt</title>
+    <style>
+    
+    .flex-container {
+      display: flex;  flex-direction:row;
+      
+  }
+
+div.el{  
+  background-color: #f1f1f1; 
+  margin: 10px;  padding: 20px;  font-size: 30px; 
+  width: 40px; 
+}
+div.rows{
+    width: 250px;
+}
+
+</style>
+<style>
+
+</style>
+</head>
+
+
+
+<body>
+    <h1>Bird Hunt</h1>
+        <p>Click on the squares to search for a bird</p>
+        <p id="shakes">Number of shakes is zero</p>
+        <p id="score">Location score is unknown</p>
+		  <div class="flex-container">
+            <div class ="el" id="0" onclick="check(0)"><img src="grass.jpg" alt="" width="40px" height="40px"></div> 
+            <div class ="el" id="1" onclick="check(1)"><img src="grass.jpg" alt="" width="40px" height="40px"></div>  
+            <div class ="el" id="2" onclick="check(2)"><img src="grass.jpg" alt="" width="40px" height="40px"></div>  
+            <div class ="el" id="3" onclick="check(3)"><img src="grass.jpg" alt="" width="40px" height="40px"></div>  
+            <div class ="el" id="4" onclick="check(4)"><img src="grass.jpg" alt="" width="40px" height="40px"></div>
+          </div> 
+          <div class="flex-container">
+            <div class ="el" id="5" onclick="check(5)"><img src="grass.jpg" alt="" width="40px" height="40px"></div> 
+            <div class ="el" id="6" onclick="check(6)"><img src="grass.jpg" alt="" width="40px" height="40px"></div>  
+            <div class ="el" id="7" onclick="check(7)"><img src="grass.jpg" alt="" width="40px" height="40px"></div>  
+            <div class ="el" id="8" onclick="check(8)"><img src="grass.jpg" alt="" width="40px" height="40px"></div>  
+            <div class ="el" id="9" onclick="check(9)"><img src="grass.jpg" alt="" width="40px" height="40px"></div>
+          </div>  
+          <div class="flex-container">
+            <div class ="el" id="10" onclick="check(10)"><img src="grass.jpg" alt="" width="40px" height="40px"></div> 
+            <div class ="el" id="11" onclick="check(11)"><img src="grass.jpg" alt="" width="40px" height="40px"></div>  
+            <div class ="el" id="12" onclick="check(12)"><img src="grass.jpg" alt="" width="40px" height="40px"></div>  
+            <div class ="el" id="13" onclick="check(13)"><img src="grass.jpg" alt="" width="40px" height="40px"></div>  
+            <div class ="el" id="14" onclick="check(14)"><img src="grass.jpg" alt="" width="40px" height="40px"></div>
+          </div> 
+          <div class="flex-container">
+            <div class ="el" id="15" onclick="check(15)"><img src="grass.jpg" alt="" width="40px" height="40px"></div> 
+            <div class ="el" id="16" onclick="check(16)"><img src="grass.jpg" alt="" width="40px" height="40px"></div>  
+            <div class ="el" id="17" onclick="check(17)"><img src="grass.jpg" alt="" width="40px" height="40px"></div>  
+            <div class ="el" id="18" onclick="check(18)"><img src="grass.jpg" alt="" width="40px" height="40px"></div>  
+            <div class ="el" id="19" onclick="check(19)"><img src="grass.jpg" alt="" width="40px" height="40px"></div>
+          </div> 
+          <div class="flex-container">
+            <div class ="el" id="20" onclick="check(20)"><img src="grass.jpg" alt="" width="40px" height="40px"></div> 
+            <div class ="el" id="21" onclick="check(21)"><img src="grass.jpg" alt="" width="40px" height="40px"></div>  
+            <div class ="el" id="22" onclick="check(22)"><img src="grass.jpg" alt="" width="40px" height="40px"></div>  
+            <div class ="el" id="23" onclick="check(23)"><img src="grass.jpg" alt="" width="40px" height="40px"></div>  
+            <div class ="el" id="24" onclick="check(24)"><img src="grass.jpg" alt="" width="40px" height="40px"></div>
+          </div> 
+           
+          <script>
+              var ids = [25]
+              var shakeCount = 0
+              var birdLocation = 18
+              for (let i = 0; i < ids; i++) {
+                 ids[i] = document.getElementById[JSON.stringify[i]]
+                }
+                useImage = 1
+
+                
+                function check(position){
+                    
+                    if(ids[position] == "18"){
+                        document.getElementById("18").src = "bird.jpg"
+                        shakeCount += 1
+                        //swapImage()
+                    }
+                    locationScore(ids[position], "18")
+                    
+                }
+                function locationScore(pos1, pos2){
+                    if(pos1 == document.getElementById("12") || pos1 ==document.getElementById("14") || pos1 ==document.getElementById("22") ||pos1 == document.getElementById("24")){
+                        shakeCount += 1
+                    }
+                    else if(pos1 == document.getElementById("3") || pos1 ==document.getElementById("8") || 
+                    pos1 ==document.getElementById("13") || pos1 ==document.getElementById("23")
+                    || pos1 ==document.getElementById("15") || pos1 ==document.getElementById("16") || pos1 ==document.getElementById("17") 
+                    || pos1 ==document.getElementById("19")){
+                        shakeCount += 1
+                    }
+                }
+                document.getElementById("shakes").innerHTML = "Number of shakes is " + shakeCount
+          </script>
+		
+		
+
+
+
+	
+	</body>
+	</html>	
