@@ -37,7 +37,7 @@
 		</p>
 		<button onclick="makeNewDiv()">Add value</button>
 		<button onclick="fetchItem()">Fetch</button>
-		<button onclick="makeNewDiv()">Zap value</button>
+		<button onclick="zap()">Zap value</button>
 	
 	
 </body>
@@ -46,6 +46,17 @@
 		queueItems = getElementsByClassname("queue")
 		if( queueItems.length > 0){
 			queueItems.remove(queueItems[queueItems.length-1])
+		}
+	}
+	function zap(){
+		queueItems = getElementsByClassname("queue")
+		
+		for(variable of queueItems){
+			if(document.getElementById(variable).value ==
+			 document.getElementById("input").value){
+				 queueItems.remove(queueItems[variable])
+				 console.log(variable)
+			 }
 		}
 	}
 	function makeNewDiv(){
